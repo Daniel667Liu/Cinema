@@ -103,7 +103,7 @@ public class GroupControl : MonoBehaviour
         GameObject chair = Instantiate(chairReference, spawnPos1, Quaternion.identity);
         chair.transform.rotation = chairReference.GetComponent<Transform>().rotation;
         chair.transform.localScale = chairReference.GetComponent<Transform>().localScale;
-        //chair.GetComponent<Transform>().SetParent(chairReference.GetComponent<Transform>(), true);
+        chair.GetComponent<Transform>().SetParent(clone.GetComponent<Transform>(), true);
         
     }
 
