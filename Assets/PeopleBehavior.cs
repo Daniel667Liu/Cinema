@@ -22,8 +22,8 @@ public class PeopleBehavior : MonoBehaviour
     public GameObject block3;
 
     public GroupControl gp;
-    
-    
+
+    public Vector2Int test;
 
     private IEnumerator coroutine;
     // Start is called before the first frame update
@@ -66,9 +66,17 @@ public class PeopleBehavior : MonoBehaviour
 
     public void standUp() 
     {
-       
+
+        if (stand) 
+        {
+            return;
+        }
+
+        stand = true;
         coroutine = WaitAndStand(blockedTimeThreshhold);
         StartCoroutine(coroutine);
+
+        
 
         
 
@@ -83,6 +91,7 @@ public class PeopleBehavior : MonoBehaviour
 
             this.gameObject.GetComponent<Transform>().position
             = new Vector3(this.gameObject.GetComponent<Transform>().position.x, standPositionY, this.gameObject.GetComponent<Transform>().position.z);
+            
             if (block1 != null && block2 != null && block3 != null)
             {
                 block1.GetComponent<PeopleBehavior>().standUp();
@@ -99,8 +108,10 @@ public class PeopleBehavior : MonoBehaviour
                 block3.GetComponent<PeopleBehavior>().standUp();
                 block2.GetComponent<PeopleBehavior>().standUp();
             }
-
-            stand = true;
+            
+            Debug.Log(test);
+            
+            
 
             StopCoroutine(coroutine);
         }

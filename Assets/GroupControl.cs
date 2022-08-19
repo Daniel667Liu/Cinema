@@ -59,6 +59,7 @@ public class GroupControl : MonoBehaviour
         clone.GetComponent<PeopleBehavior>().gp = this;
         crowd[i,j] = clone;
         unselected.Add(clone);
+        clone.GetComponent<PeopleBehavior>().test = new Vector2Int(i, j);
 
     }
 

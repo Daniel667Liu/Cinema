@@ -239,6 +239,7 @@ MonoBehaviour:
   block2: {fileID: 0}
   block3: {fileID: 0}
   gp: {fileID: 0}
+  test: {x: 0, y: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,7 +411,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 1, z: -39.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -453,7 +454,7 @@ MonoBehaviour:
   deltaY: 2
   deltaZ: 2
   peopleReference: {fileID: 316622284}
-  gapTime: 0.2
+  gapTime: 0.1
   unselected: []
 --- !u!4 &1729829789
 Transform:
